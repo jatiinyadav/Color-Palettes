@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Color Palette Generator</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center; padding: 50px; font-size: 3rem;">Random Color Palette Generator</h1>
+    </div>
+    <button class="btn" onclick="addColor();">Refresh</button><br><br><br><br>
+    <section class="container"></section>
+
+    <script>
+        for (let i = 1; i <= 100; i++) {
+            const box = document.createElement("div")
+            box.classList.add('box');
+            document.querySelector(".container").appendChild(box);
+        }
+
+        const btn = document.querySelector(".btn");
+        const randomColorBlock = document.querySelectorAll(".box");
+
+        function RandomHexColorCode() {
+            var chars = "0123456789abcdef";
+            var colorlength = 6;
+            var color = "";
+
+            for (var i = 0; i < colorlength; i++) {
+                var randomColor = Math.floor(Math.random() * chars.length);
+                color += chars.substring(randomColor, randomColor + 1)
+            }
+
+            return "#" + color;
+        }
+
+        function addColor() {
+            randomColorBlock.forEach(e => {
+                var newColor = RandomHexColorCode();
+                e.style.backgroundColor = newColor;
+                e.innerHTML = newColor;
+            })
+        }
+    </script>
+</body>
+
+</html>
