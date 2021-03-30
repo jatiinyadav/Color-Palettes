@@ -6,47 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Random Color Palette Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://img.icons8.com/dusk/640/000000/color-dropper.png">
+    <title>Color Palettes</title>
 </head>
 
 <body>
-    <div>
-        <h1 style="text-align: center; padding: 50px; font-size: 3rem;">Random Color Palette Generator</h1>
+
+
+    <div class="intro"><br><br><br>
+
+        <div>
+            <h1>Color Palettes for Designers and Artists</h1><br><br><br>
+            <h4>Browse
+                beautiful color
+                combinations for your
+                designs. Create
+                the perfect palette or get
+                inspired by thousands of beautiful color schemes.</h4>
+        </div>
+
+        <div class="refresh-btn">
+
+            <a href="#" onclick="addColor();">
+                <span>REFRESH</span>
+                <div class=" liquid"></div>
+            </a>
+
+        </div><br><br><br><br>
+
     </div>
-    <button class="btn" onclick="addColor();">Refresh</button><br><br><br><br>
+
     <section class="container"></section>
 
-    <script>
-        for (let i = 1; i <= 100; i++) {
-            const box = document.createElement("div")
-            box.classList.add('box');
-            document.querySelector(".container").appendChild(box);
-        }
+    <footer>
+        &#x3c; &#47; &#x3e; with ❤️ by <a class="footer-name" href="https://jatiinyadav.github.io" target="_blank">
+            Jatin Yadav</a>
+    </footer>
 
-        const btn = document.querySelector(".btn");
-        const randomColorBlock = document.querySelectorAll(".box");
+    <script src="main.js"></script>
 
-        function RandomHexColorCode() {
-            var chars = "0123456789abcdef";
-            var colorlength = 6;
-            var color = "";
-
-            for (var i = 0; i < colorlength; i++) {
-                var randomColor = Math.floor(Math.random() * chars.length);
-                color += chars.substring(randomColor, randomColor + 1)
-            }
-
-            return "#" + color;
-        }
-
-        function addColor() {
-            randomColorBlock.forEach(e => {
-                var newColor = RandomHexColorCode();
-                e.style.backgroundColor = newColor;
-                e.innerHTML = newColor;
-            })
-        }
-    </script>
+    <!--<h1>HOWDY!, Thank you so much for getting here! I’m Fabrizio, creator and maintainer of Coolors. I’d really love to get in
+        touch with you to hear your feedback or just say hello! 😃</h1>-->
 </body>
 
 </html>
