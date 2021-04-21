@@ -55,6 +55,167 @@ a {
   border-radius: 40px;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.contentBox {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: url(Photos/popup-bg.jpg);
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.contentBox .imgBX {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentBox .imgBX::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.contentBox .imgBX img {
+  position: relative;
+  max-width: 250px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.contentBox .content {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentBox .content h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contentBox .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: url("Photos/close.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .contentBox {
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+  }
+  .contentBox .imgBX {
+    height: 200px;
+    transform: translateY(-50px);
+  }
+  .contentBox .content {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .close {
+    top: -50px;
+    right: -10px;
+    background: url("Photos/close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+}
+
+.fa-facebook {
+  padding: 5px 10px;
+  border-radius: 10%;
+  background: white;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-facebook:hover {
+  color: #4267b2;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-github {
+  padding: 5px 8px;
+  border-radius: 10%;
+  background: white;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-github:hover {
+  color: #727171;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-twitter {
+  padding: 5px 8px;
+  border-radius: 10%;
+  background: white;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-linkedin {
+  padding: 5px 8px;
+  border-radius: 10%;
+  background: white;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-linkedin:hover {
+  color: #0e76a8;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+.fa-instagram {
+  padding: 5px 8px;
+  border-radius: 10%;
+  background: white;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
+
+.fa-instagram:hover {
+  color: #e1306c;
+  transition: 0.3s;
+  -webkit-transition: 0.4s all;
+}
 .footer-name {
   padding: 1px;
   display: inline;
@@ -70,7 +231,7 @@ a span {
   color: #fff;
   font-family: Arial;
   letter-spacing: 5px;
-  z-index: 1;
+  z-index: 10;
 }
 
 a .liquid {
