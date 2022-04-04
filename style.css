@@ -66,7 +66,7 @@ a {
 .contentBox {
   position: relative;
   width: 600px;
-  height: 400px;
+  height: 350px;
   background: url(Photos/popup-bg.jpg);
   border-radius: 20px;
   display: flex;
@@ -74,35 +74,12 @@ a {
   z-index: 100;
 }
 
-.contentBox .imgBX {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contentBox .imgBX::before {
-  content: "";
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 10px;
-}
-
-.contentBox .imgBX img {
-  position: relative;
-  max-width: 250px;
-  border-radius: 10px;
-  z-index: 1;
-}
 
 .contentBox .content {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
+  text-align: center;  
+  margin: auto;
 }
 
 .contentBox .content h2 {
