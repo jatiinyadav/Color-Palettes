@@ -44,17 +44,6 @@ h4 {
   margin: 0 auto;
   font-size: 1.5rem;
 }
-
-a {
-  position: relative;
-  padding: 20px 50px;
-  display: block;
-  text-decoration: none;
-  width: 200px;
-  overflow: hidden;
-  border-radius: 40px;
-}
-
 .popup {
   position: fixed;
   top: 50%;
@@ -203,61 +192,49 @@ a {
   text-decoration: underline;
 }
 
-a span {
+a{
   position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+a span{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+a span:before,
+a span:after{
+  position: absolute;
+  content: "REFRESH";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+a span:before{
   color: #fff;
-  font-family: Arial;
-  letter-spacing: 5px;
-  z-index: 10;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+a span:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+a span:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
 }
 
-a .liquid {
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  background: #4973ff;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-
-a .liquid::after,
-a .liquid::before {
-  content: "";
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  /* background: #000; */
-}
-
-a .liquid::before {
-  border-radius: 45%;
-  background: rgba(20, 20, 20, 1);
-  animation: animate 5s linear infinite;
-}
-
-a .liquid::after {
-  border-radius: 40%;
-  background: rgba(20, 20, 20, 0.5);
-  animation: animate 10s linear infinite;
-}
-
-a:hover .liquid {
-  top: -120px;
-}
-
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
-  }
-}
 
 .container {
   width: 100%;

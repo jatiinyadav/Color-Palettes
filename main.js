@@ -2,21 +2,6 @@ window.onload = function () {
   addColor();
 };
 
-// POPUP
-const popup = document.querySelector(".popup");
-const close = document.querySelector(".close");
-
-window.onload = function () {
-  addColor();
-  setTimeout(function () {
-    popup.style.display = "block";
-  }, 1500);
-};
-
-close.addEventListener("click", () => {
-  popup.style.display = "none";
-});
-
 // BUTTON
 for (let i = 1; i <= 25; i++) {
   const box = document.createElement("div");
