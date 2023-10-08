@@ -88,6 +88,36 @@ h4 {
   cursor: pointer;
   z-index: 10;
 }
+.copy-popup {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.952);
+  color:white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 999;
+}
+
+.copy-popup.show {
+  display: block;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 @media (max-width: 767px) {
   .contentBox {

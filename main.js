@@ -47,17 +47,19 @@ function addColor() {
 
     e.addEventListener('click', () => {
       navigator.clipboard.writeText(newColor)
-        .then(() => {
-          e.innerHTML = "✓copied!";
-          setTimeout(() => {
-            e.innerHTML = "copy";
-          }, 1000); // Reset the text to the original color code/copy option after 1 second
-        })
-        .catch((error) => {
-          console.error('Error copying text: ', error); //if somthing is wrong at the time of coping the text.
-        });
+      showCopyPopup(newColor);
     });
-
-    
   });
+}
+//function to show copy colorcode popup
+function showCopyPopup(color) {
+  const copyPopup = document.getElementById('copy-popup');
+  const copiedColor = document.getElementById('copied-color');
+
+  copiedColor.textContent = color;
+  copyPopup.classList.add('show');
+
+  setTimeout(() => {
+    copyPopup.classList.remove('show');
+  }, 2000);
 }
