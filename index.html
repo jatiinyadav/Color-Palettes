@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="icon"
-      href="https://img.icons8.com/dusk/640/000000/color-dropper.png"
-    />
-    <script src="main.js" defer></script>
-    <title>Color Palettes</title>
-  </head>
 
-  <body>
-    <div class="intro">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" href="https://img.icons8.com/dusk/640/000000/color-dropper.png" />
+  <script src="main.js" defer></script>
+  <title>Color Palettes</title>
+</head>
+
+<body>
+  <div class="intro">
+    <br /><br /><br />
+
+    <div>
+      <h1>Color Palettes for Designers and Artists</h1>
       <br /><br /><br />
-
-      <div>
-        <h1>Color Palettes for Designers and Artists</h1>
-        <br /><br /><br />
-        <h4>
-          Browse beautiful color combinations for your designs. Create the
-          perfect palette or get inspired by thousands of beautiful color
-          schemes.
-        </h4>
-      </div>
-
-      <div class="refresh-btn">
-        <a href="#" onclick="addColor();">
-          <span></span>
-          <div class="liquid"></div>
-        </a>
-      </div>
-      <br /><br /><br /><br />
+      <h4>
+        Browse beautiful color combinations for your designs. Create the
+        perfect palette or get inspired by thousands of beautiful color
+        schemes.
+      </h4>
     </div>
 
-    <section class="container"></section>
-
-    <div class="popup">
-      <div class="contentBox">
-        <div class="close"></div>
-      </div>
+    <div class="refresh-btn">
+      <a href="#" onclick="addColor();">
+        <span></span>
+        <div class="liquid"></div>
+      </a>
     </div>
+    <br /><br /><br /><br />
+  </div>
 
-    <footer>Made with ❤️ by Jatin Yadav</footer>
-  </body>
+  <section class="container"></section>
+  
+  <div class="copy-popup" id="copy-popup">Copied - <span id="copied-color"></span></div>
+
+  <div class="popup">
+    <div class="contentBox">
+      <div class="close"></div>
+    </div>
+  </div>
+
+  <footer>Made with ❤️ by Jatin Yadav</footer>
+</body>
+
 </html>

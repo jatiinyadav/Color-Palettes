@@ -45,10 +45,21 @@ function addColor() {
       e.innerHTML=newColor;
     });
 
-    e.addEventListener('click',()=>{
-      navigator.clipboard.writeText(newColor);
+    e.addEventListener('click', () => {
+      navigator.clipboard.writeText(newColor)
+      showCopyPopup(newColor);
     });
-
-    
   });
+}
+//function to show copy colorcode popup
+function showCopyPopup(color) {
+  const copyPopup = document.getElementById('copy-popup');
+  const copiedColor = document.getElementById('copied-color');
+
+  copiedColor.textContent = color;
+  copyPopup.classList.add('show');
+
+  setTimeout(() => {
+    copyPopup.classList.remove('show');
+  }, 2000);
 }
