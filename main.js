@@ -28,24 +28,24 @@ function RandomHexColorCode() {
 }
 
 function addColor() {
-  randomColorBlock.forEach((e) => {
+  randomColorBlock.forEach((event) => {
     var newColor = RandomHexColorCode();
-    e.style.backgroundColor = newColor;
-    e.innerHTML = newColor;
+    event.style.backgroundColor = newColor;
+    event.innerHTML = newColor;
 
     // Get the element you want to add hover styles to
     // Add a 'mouseenter' event listener to add the 'hovered' class when the mouse enters
-    e.addEventListener('mouseenter', () => {
+    event.addEventListener('mouseenter', () => {
       // console.log('hovered');
-    e.innerHTML="copy";
+    event.innerHTML="copy";
     });
     // Add a 'mouseleave' event listener to remove the 'hovered' class when the mouse leaves
-    e.addEventListener('mouseleave', () => {
+    event.addEventListener('mouseleave', () => {
       // console.log('nothovered');
-      e.innerHTML=newColor;
+      event.innerHTML=newColor;
     });
 
-    e.addEventListener('click', () => {
+    event.addEventListener('click', () => {
       navigator.clipboard.writeText(newColor)
       showCopyPopup(newColor);
     });
